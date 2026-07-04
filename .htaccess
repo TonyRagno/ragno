@@ -1,0 +1,26 @@
+RewriteEngine On
+RewriteBase /
+
+# 1. Forza HTTPS (Ottimo per SEO e Sicurezza)
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# 2. Rimuove index.html del tutto (Reindirizza a /)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+RewriteRule ^index\.html$ / [R=301,L]
+
+# 3. Rimuove l'estensione .html dalle altre pagine (es. about.html -> about)
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [L,R=301]
+
+# 4. Mappa internamente le URL pulite ai file fisici,
+#    anche nelle sottocartelle (es. /brani/sake -> /brani/sake.html)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.+)$ $1.html [L]
+
+# 5. Opzionale: Protegge il file .htaccess stesso
+<Files .htaccess>
+    Order allow,deny
+    Deny from all
+</Files>

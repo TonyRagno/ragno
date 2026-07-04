@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viceconte — Electronic Press Kit</title>
+    <style>
+        @media print {
+            @page {
+                margin: 2cm;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .epk-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #1a1a1a;
+        }
+
+        .epk-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+        }
+
+        .epk-header .tagline {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .epk-header .contact {
+            font-size: 0.95rem;
+            color: #333;
+            margin-top: 1rem;
+        }
+
+        .epk-header .contact a {
+            color: #1a1a1a;
+            text-decoration: none;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+
+        .section p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .section ul li {
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .section ul li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #1a1a1a;
+            font-weight: bold;
+        }
+
+        .highlight {
+            background: #f5f5f5;
+            padding: 1.5rem;
+            border-left: 4px solid #1a1a1a;
+            margin: 1.5rem 0;
+        }
+
+        .highlight strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .discography-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #fafafa;
+            border-radius: 8px;
+        }
+
+        .discography-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .discography-item .meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .link-item {
+            padding: 0.75rem;
+            background: #f5f5f5;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .link-item a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background: #fafafa;
+            border-radius: 8px;
+        }
+
+        .stat-item .number {
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item .label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #1a1a1a;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        @media print {
+            .download-btn {
+                display: none;
+            }
+        }
+    </style>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1T3DN0ZDMK"></script>
+<script>
+    const GA_MEASUREMENT_ID = "G-1T3DN0ZDMK";
+    window.GA_MEASUREMENT_ID = GA_MEASUREMENT_ID;
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        window.dataLayer.push(arguments);
+    }
+    window.gtag = window.gtag || gtag;
+
+    gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+        wait_for_update: 500
+    });
+
+    gtag("js", new Date());
+    gtag("config", GA_MEASUREMENT_ID, {
+        anonymize_ip: true,
+        send_page_view: false
+    });
+</script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="epk-header">
+        <h1>VICECONTE</h1>
+        <div class="tagline">Cantautore Indie | Milano, Italia</div>
+        <div class="contact">
+            <strong>Booking & Press:</strong> <a
+                href="mailto:info@antonioviceconte.it">info@antonioviceconte.it</a><br>
+            <strong>Web:</strong> <a href="https://www.antonioviceconte.it/music.html">antonioviceconte.it/music</a>
+        </div>
+    </div>
+
+    <!-- BIO -->
+    <div class="section">
+        <h2>Bio</h2>
+        <p>
+            <strong>Viceconte</strong> è il progetto solista di Antonio Viceconte, cantautore indie nato sotto il sacro
+            Monte Alpi,
+            nelle campagne di Castelsaraceno (Basilicata) e cresciuto sui palchi della regione. Dalla chitarra nelle
+            piazze di paese al basso
+            nei pub, fino a Milano dove la musica si è trasformata in racconto intimo e personale.
+        </p>
+        <p>
+            Il suo approccio artistico nasce dall'osservazione del quotidiano: momenti di indecisione, strade non prese,
+            notti osservate. Ogni canzone è una mappa emotiva, un invito a vivere ogni passo con coraggio.
+            La sua musica unisce elettronica e cantautorato, creando atmosfere in cui il suono diventa protagonista
+            tanto
+            quanto le parole.
+        </p>
+        <p>
+            Prima di Viceconte, Antonio ha fatto parte di diverse formazioni che hanno segnato il suo percorso
+            artistico:
+            i <strong>Pabart</strong> (2009-2016), con cui ha suonato cover di De André e Vasco Rossi nei pub della
+            Basilicata,
+            e <strong>Gli Zii dello Sposo</strong> (2016-2018), progetto folk-pop che lo ha portato a calcare palchi
+            nazionali,
+            tra cui il <strong>Wood Sound Festival 2017</strong> in apertura a Gazzelle e il <strong>Capodanno RAI
+                2018</strong>
+            a "L'Anno che Verrà" su RAI 1.
+        </p>
+    </div>
+
+    <!-- ACHIEVEMENTS -->
+    <div class="section">
+        <h2>Highlights & Achievements</h2>
+        <ul>
+            <li><strong>Wood Sound Festival 2017</strong> · Opening act per Gazzelle</li>
+            <li><strong>"Peter Pan" — Gli Zii dello Sposo (2017)</strong> · Autore del brano</li>
+            <li><strong>EP "Atlante" — ORI GAMI</strong> · Co-autore di un brano</li>
+            <li><strong>10+ anni di esperienza live</strong> · Piazze, sagre, festival e pub in tutta la Basilicata</li>
+        </ul>
+    </div>
+
+    <!-- DISCOGRAPHY -->
+    <div class="section">
+        <h2>Discografia</h2>
+
+        <div class="discography-item">
+            <h3>Non è vero</h3>
+            <div class="meta">Singolo • 10 Aprile 2026</div>
+            <p>
+                L'ultima uscita. Un brano intimo e introspettivo che segna un nuovo capitolo artistico
+                per Viceconte.
+            </p>
+            <p><strong>Spotify:</strong> <a
+                    href="https://open.spotify.com/intl-it/track/5dB6fXLSD1J7NazJSlcE7J">open.spotify.com/track/5dB6fXLSD1J7NazJSlcE7J</a>
+            </p>
+        </div>
+
+        <div class="discography-item">
+            <h3>Luna Piena</h3>
+            <div class="meta">Singolo • 21 Giugno 2025</div>
+            <p>
+                "Luna Piena" nasce da una notte passata a osservare il cielo, cercando di dare un senso al silenzio
+                e alla quiete. È un brano che esplora il contrasto tra la luce della luna e l'oscurità interiore,
+                trasformando l'osservazione in emozione, la notte in narrazione. Un viaggio sonoro tra elettronica
+                e cantautorato, dove l'atmosfera diventa protagonista.
+            </p>
+            <p><strong>Spotify:</strong> <a
+                    href="https://open.spotify.com/track/7tGytFZi4juwWkPRwvK8pk">open.spotify.com/track/7tGytFZi4juwWkPRwvK8pk</a>
+            </p>
+        </div>
+
+        <div class="discography-item">
+            <h3>Strade</h3>
+            <div class="meta">Singolo • 13 Dicembre 2024</div>
+            <p>
+                Il primo singolo come Viceconte. Pubblicare questa canzone è il modo di Antonio di lasciare un segno,
+                un piccolo granello di sabbia nel mondo. Scritta in uno dei momenti di indecisione più intensi,
+                fermo ad aspettare un vento che non si alzava mai. Tante strade iniziate a metà, per poi ritornare
+                sui vecchi passi. "Strade" è una mappa, una carezza. Un invito a vivere ogni passo con coraggio,
+                perché ogni strada, anche la più incerta, può diventare la tua, se hai la forza di percorrerla.
+            </p>
+            <p><strong>Spotify:</strong> <a
+                    href="https://open.spotify.com/track/68DB3mChjxzE1K0EU0uB71">open.spotify.com/track/68DB3mChjxzE1K0EU0uB71</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- PERCORSO MUSICALE -->
+    <div class="section">
+        <h2>Percorso Musicale</h2>
+
+        <div class="highlight">
+            <strong>2024-oggi · Viceconte</strong>
+            <p>
+                Il progetto solista, la narrazione intima, la musica come racconto del quotidiano.
+                Prima apparizione live al Malerba Fest di Lauria con Luna Piena.
+                Il primo vero concerto di lancio del progetto alla Stazione Radio.
+            </p>
+        </div>
+
+        <div class="highlight">
+            <strong>2018-2020 · ORI GAMI</strong>
+            <p>
+                Singoli e l'EP "Atlante", co-autore di un brano.
+            </p>
+        </div>
+
+        <div class="highlight">
+            <strong>2016-2018 · Gli Zii dello Sposo</strong>
+            <p>
+                Autore del brano "Peter Pan" (2017). Wood Sound Festival in apertura a Gazzelle.
+                Il palco, l'inizio della scrittura musicale personale.
+            </p>
+        </div>
+
+        <div class="highlight">
+            <strong>2009-2016 · Pabart</strong>
+            <p>
+                Con gli amici del liceo, cover di De André e Vasco Rossi nei pub della Basilicata.
+                La musica come linguaggio universale, tra piazze e sagre.
+            </p>
+        </div>
+    </div>
+
+    <!-- SETUP LIVE -->
+    <div class="section">
+        <h2>Setup Live</h2>
+        <p>
+            Il live di Viceconte è essenziale e diretto: voce, chitarra e loop.
+            Un setup minimalista che mette al centro la canzone e il racconto.
+        </p>
+        <ul>
+            <li><strong>Voce</strong> — microfono e nient'altro tra me e chi ascolta</li>
+            <li><strong>Chitarra acustica</strong> — con Mooers (ampli digitali come output)</li>
+            <li><strong>Pedale loop</strong> — per costruire arrangiamenti dal vivo, strato su strato</li>
+        </ul>
+    </div>
+
+    <!-- LINKS -->
+    <div class="section">
+        <h2>Streaming & Social</h2>
+        <div class="links-grid">
+            <div class="link-item">
+                <a href="https://open.spotify.com/intl-it/artist/2oJpcUadVXV3OgkGUyDUjm" target="_blank">Spotify</a>
+            </div>
+            <div class="link-item">
+                <a href="https://music.apple.com/us/artist/viceconte/1784605565" target="_blank">Apple Music</a>
+            </div>
+            <div class="link-item">
+                <a href="https://music.amazon.com/artists/B0DPVBPDVN/viceconte" target="_blank">Amazon Music</a>
+            </div>
+            <div class="link-item">
+                <a href="https://www.youtube.com/@viceconte" target="_blank">YouTube</a>
+            </div>
+            <div class="link-item">
+                <a href="https://instagram.com/viceconte.av" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTATTI -->
+    <div class="section">
+        <h2>Contatti</h2>
+        <p>
+            <strong>Booking & Collaborazioni:</strong> <a
+                href="mailto:info@antonioviceconte.it">info@antonioviceconte.it</a><br>
+            <strong>Stampa & Media:</strong> <a href="mailto:info@antonioviceconte.it">info@antonioviceconte.it</a><br>
+            <strong>Website:</strong> <a href="https://www.antonioviceconte.it">www.antonioviceconte.it</a>
+        </p>
+    </div>
+
+    <!-- DOWNLOAD BUTTON -->
+    <div class="no-print" style="text-align: center; margin-top: 3rem;">
+        <a href="#" onclick="window.print(); return false;" class="download-btn">Stampa / Salva come PDF</a>
+    </div>
+
+
+    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+    <div class="cookie-content">
+        <h3>Privacy & Data</h3>
+        <p>
+            Uso cookie analytics per capire come navighi il sito e migliorare i contenuti.
+            Puoi accettare o rifiutare in qualsiasi momento.
+        </p>
+    </div>
+    <div class="cookie-actions">
+        <button id="cookie-decline" class="cookie-btn cookie-btn--secondary" type="button">Rifiuta</button>
+        <button id="cookie-accept" class="cookie-btn cookie-btn--primary" type="button">Accetta</button>
+    </div>
+</div>
+
+<style>
+    .cookie-banner {
+        position: fixed;
+        right: 1.2rem;
+        bottom: 1.2rem;
+        width: min(380px, calc(100vw - 2.4rem));
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(10, 10, 10, 0.96);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-radius: 8px;
+        padding: 1.1rem;
+        box-shadow: 0 14px 45px rgba(0, 0, 0, 0.45);
+        z-index: 9999;
+        transform: translateY(calc(100% + 2rem));
+        transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .cookie-banner.visible {
+        transform: translateY(0);
+    }
+
+    .cookie-content h3 {
+        margin: 0;
+        font-family: "Syncopate", sans-serif;
+        font-size: 0.78rem;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: var(--text-main);
+    }
+
+    .cookie-content p {
+        margin: 0.8rem 0 0;
+        font-size: 0.82rem;
+        line-height: 1.55;
+        color: #d2d2d2;
+    }
+
+    .cookie-actions {
+        display: flex;
+        gap: 0.6rem;
+        margin-top: 1rem;
+    }
+
+    .cookie-btn {
+        appearance: none;
+        border-radius: 6px;
+        padding: 0.54rem 0.85rem;
+        font-size: 0.7rem;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: border-color 0.25s ease, background 0.25s ease, color 0.25s ease;
+    }
+
+    .cookie-btn--secondary {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        color: #f0f0f0;
+    }
+
+    .cookie-btn--secondary:hover {
+        border-color: rgba(255, 255, 255, 0.4);
+        background: rgba(255, 255, 255, 0.06);
+    }
+
+    .cookie-btn--primary {
+        background: var(--accent);
+        border: 1px solid var(--accent);
+        color: #000;
+        font-weight: 700;
+    }
+
+    .cookie-btn--primary:hover {
+        background: var(--accent-light);
+        border-color: var(--accent-light);
+    }
+
+    @media (max-width: 768px) {
+        .cookie-banner {
+            right: 1rem;
+            left: 1rem;
+            width: auto;
+            bottom: 1rem;
+        }
+    }
+</style>
+
+<script>
+    (function () {
+        const STORAGE_KEY = "av_cookie_consent";
+        const banner = document.getElementById("cookie-banner");
+        const btnAccept = document.getElementById("cookie-accept");
+        const btnDecline = document.getElementById("cookie-decline");
+
+        if (!banner || !btnAccept || !btnDecline) {
+            return;
+        }
+
+        const safeGet = () => {
+            try {
+                return localStorage.getItem(STORAGE_KEY);
+            } catch (_error) {
+                return null;
+            }
+        };
+
+        const safeSet = (value) => {
+            try {
+                localStorage.setItem(STORAGE_KEY, value);
+            } catch (_error) {
+                // Ignore storage errors (private mode / restricted storage).
+            }
+        };
+
+        const applyConsent = (status, persist = true) => {
+            if (typeof window.gtag === "function") {
+                window.gtag("consent", "update", {
+                    ad_storage: status,
+                    ad_user_data: status,
+                    ad_personalization: status,
+                    analytics_storage: status
+                });
+
+                if (status === "granted") {
+                    if (window.GA_MEASUREMENT_ID) {
+                        window.gtag("config", window.GA_MEASUREMENT_ID, {
+                            anonymize_ip: true
+                        });
+                    }
+
+                    window.gtag("event", "page_view", {
+                        page_title: document.title,
+                        page_location: window.location.href,
+                        page_path: window.location.pathname
+                    });
+                }
+            }
+
+            if (persist) {
+                safeSet(status);
+            }
+
+            banner.classList.remove("visible");
+        };
+
+        const consent = safeGet();
+        if (consent === "granted" || consent === "denied") {
+            applyConsent(consent, false);
+        } else {
+            setTimeout(() => {
+                banner.classList.add("visible");
+            }, 800);
+        }
+
+        btnAccept.addEventListener("click", () => applyConsent("granted", true));
+        btnDecline.addEventListener("click", () => applyConsent("denied", true));
+    })();
+</script>
+</body>
+
+</html>
